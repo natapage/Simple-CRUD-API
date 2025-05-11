@@ -35,7 +35,7 @@ To run the application in production mode:
 npm run start:prod
 ```
 
-### Multi-Process Mode
+### Load balancer
 To run the application in multi-process mode:
 ```bash
 npm run start:multi
