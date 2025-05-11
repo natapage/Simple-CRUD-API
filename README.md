@@ -11,15 +11,15 @@ This is a simple CRUD (Create, Read, Update, Delete) API built with Node.js and 
 ## Installation
 
 1. Clone the repository:
-   ```bash
+```bash
    git clone https://github.com/natapage/Simple-CRUD-API.git
    cd crud-api
-   ```
+```
 
 2. Install dependencies:
-   ```bash
+```bash
    npm install
-   ```
+```
 
 ## Running the Application
 
@@ -43,6 +43,27 @@ npm run start:multi
 
 In multi-process mode, the application uses the `cluster` module to create multiple worker processes. A load balancer is started on the main port (e.g., `4000`), and it distributes incoming requests across the worker processes running on separate ports. The number of workers is determined by the number of CPU cores available on the machine.
 
+## Testing
+
+To run the tests, follow these steps:
+
+1. Start the application in development mode in one terminal:
+```bash
+   npm run start:dev
+```
+
+2. Open another terminal and run the tests:
+```bash
+   npm test
+```
+
+The tests cover the following scenarios:
+- Creating a user
+- Updating a user
+- Deleting a user
+- Handling invalid requests
+
+Ensure that the server is running in development mode before executing the tests.
 
 ## API Endpoints
 
@@ -99,10 +120,3 @@ The API provides the following endpoints:
 - Ensure the `PORT` specified in the `.env` file is not already in use.
 - The application uses TypeScript for type safety and better development experience.
 - Horizontal scaling is implemented using a load balancer with Node.js `cluster` module.
-
-## Testing
-
-The application includes tests for the API. To run the tests:
-```bash
-npm test
-```
